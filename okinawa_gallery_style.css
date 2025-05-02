@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding:0px;
+  font-family: 'Caveat', cursive;
+  background: #121212; 
+    background: linear-gradient(
+        145deg,
+        #121212 40%,
+        #1a1a1a 40%,
+        #1a1a1a 55%,
+        #121212 50%,
+        #121212 90%,
+        #1a1a1a 90%,
+        #1a1a1a
+    );
+    background-size: 40px 40px;
+    animation: move 8s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+.wave {
+  float: left;
+  margin: 20px;
+  animation: wave  ease-in-out 0.5s infinite alternate;
+  transform-origin: center -36px;
+}
+
+.wave:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.wave img {
+  border: 5px solid #f8f8f8;
+  display: block;
+  width: 200px;
+  height: 250px;
+}
+
+.wave figcaption {
+  text-align: center;
+}
+
+.wave:after{
+  content: '';
+  position: absolute;
+  width: 20px; 
+  height: 20px;
+  border: 1.5px solid #ffffff;
+  top: -10px; 
+  left: 50%;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(35deg);
+}
+       
+.wave:before{
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  display: block;
+  height: 44px;
+  width: 47px;
+  background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  z-index: 16;
+}
+        
+@keyframes wave {
+  0% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+/* шрифт Caveat */
+h1 {
+    font-family: 'Caveat', cursive; 
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+p{
+    font-family: 'Caveat', cursive; 
+    font-size: 32px;
+    color: white;
+}
+/* Шапка и навiгацiя */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    padding: 10px 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.spotify-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #121212; /* фон, чтобы не просвечивал */
+}
+
+.nav_container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    height: 60px;
+    margin-left: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-family: Caveat, cursive;
+    font-size: 32px;
+    padding: 10px 15px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    height: 2em;
+    background: linear-gradient(145deg, #292929, #1c1c1c);
+    border-radius: 0.4em;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 0 #fff, 0 6px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #fff, 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+.nav-menu a:active {
+    transform: translateY(6px);
+    box-shadow: 0 1px 0 #fff, 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#cape p{
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    z-index: 1010; 
+}
+
+#burger-toggle {
+    display: none;
+}
+/* Стилi секцiй */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    text-align: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#home {
+    background-image: url("images/gallery_bg.jpg");
+}
+
+.text1{
+    position: relative;
+    top: -5vw;
+    color: #333333;
+    font-size: 52px;
+}
+#home p, h1{
+    position: relative;
+    top: -3vw;
+    color: #333333;
+    font-size: 52px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+#Okinawa, #Kyoto {
+    background-image: url("images/gallery_main_bg.jpg");
+    flex-direction: row;
+    gap: 20px;
+}
+#Tokyo {
+    background-image: url("images/gallery_main_bg_mirrored.jpg");
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+#useful .text {
+    align-self: flex-start; 
+    margin-top: 2vw; 
+}
+
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 420px;
+  height: 500px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+  background-image: repeating-linear-gradient(
+    0deg,
+    black,
+    1px,
+    white 1px,
+    white
+  );
+  background-size: 100% 30px;
+  background-color: white;
+}
+
+.book p {
+  position: relative;
+  color: black;
+  font-size: 26px;
+  line-height: 30px;
+  font-family: 'Caveat', cursive;
+  margin: 0;
+  padding: 45px;
+  text-align: left;
+  margin-left: 0vw;
+}
+
+
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cover {
+  position: absolute;
+  width: 100%; /* растягивается по .book */
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  transform-origin: left;
+  box-shadow: 1px 1px 12px #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover:hover {
+  transform: rotateY(-80deg);
+}
+
+.cover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.cover p {
+  position: relative;
+  z-index: 1;
+  color: #36a2ba;
+  font-size: 42px;
+  font-family: 'Caveat', cursive,;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -9vw;
+  padding: 10px 20px;
+  text-shadow: 0 0 10px black;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* напівпрозора біла рамка */
+  background-color: rgba(0, 0, 0, 0.3);       /* напівпрозорий фон */
+  border-radius: 10px;
+  backdrop-filter: blur(4px); /* дає ефект "скла" */
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: -10px;
+}
+
+.book-content p {
+  margin: 0;
+}
+
+.book-content {
+  padding: auto;
+  height: 100%;
+  margin-bottom: 7vw;
+}
+
+.book-content button {
+  align-self: center;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-family: 'Caveat', sans-serif;
+  display: inline-block;
+  position: relative;
+  overflow: hidden; /* добавь! */
+  padding: 10px 20px; /* добавь, чтобы текст не прыгал */
+  transition: color 0.3s ease;
+}
+
+
+button::after,
+button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #f44336;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+button::before {
+  top: 0;
+  bottom: auto;
+  transform-origin: left;
+}
+
+button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+button:hover::before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+/* Стиль текста в секцiях */
+.text {
+    max-width: 50%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 3ображення */
+section img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+}
+
+a.underline-fancy {
+  position: relative;
+  color: #e58d27;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+}
+
+a.underline-fancy::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #f44336;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+a.underline-fancy:hover::after {
+  width: 100%;
+}
+
+.line {
+  position: relative;
+  color: #05660f;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Caveat', cursive;
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f44336;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.line::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.line::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.line:hover::before,
+.line:hover::after {
+  transform: scaleX(1);
+}
+
+/* Адаптивнiсть */
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    section img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-menu a {
+        display: block;
+        padding: 10px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    section img {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    .burger-menu {
+        display: block;
+        position: absolute;
+        right: 70px;
+        top: 15px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        z-index: 1010;
+    }
+
+    /* Прячем обычное меню */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(51, 51, 51, 0.95);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #burger-toggle:checked ~ nav .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu li {
+        padding: 10px 0;
+    }
+}
+
+/*стилi для футера */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: auto;
+    font-size: 14px;
+}
+
+footer a {
+    color: #0ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

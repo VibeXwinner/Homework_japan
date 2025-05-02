@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Caveat, cursive;
+    margin: 0;
+    padding: 0;
+}
+/* шрифт Caveat */
+h1 {
+    font-family: 'Caveat', cursive; 
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+p {
+    font-family: 'Caveat', cursive; 
+    font-size: 32px;
+    color: white;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    text-align: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#reg_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px;
+    background-image: url("images/reg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Полупрозрачное окно */
+.reg_window {
+    background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+    backdrop-filter: blur(10px);         /* Стеклянный эффект */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Текст внутри */
+.reg_window h1, .reg_window p {
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #0ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    margin-top: 20px;
+}
+
+.form input,
+
+.form button {
+    padding: 10px;
+    font-size: 24px;
+    background-color: #36a2ba;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #ff3232;
+    transform: scale(1.05);
+}

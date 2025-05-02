@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Японія</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+function checkAccess(event){
+    event.preventDefault(); // чтобы форма не перезагружала страницу
+
+    const email = document.getElementById('email').value.trim();
+    const pass = document.getElementById('pass').value.trim();
+    const result = document.getElementById('loginResult');
+
+    if (email === "info@kizuna.voyage.com" && pass === "admin_52"){
+        window.location.href = "main.html";
+        result.innerText = "З поверненням ⛩️";
+        result.style.color = "green";
+    } else {
+        result.innerText = "Доступ заборонено ⛔";
+        result.style.color = "red";
+    }
+}
+</script>
+<body>
+
+    <header>
+    </header>
+
+    <main>
+    	<section id="reg_menu">
+    		<div class="reg_window">
+    			<div class="text">
+    				<h1>Kizuna Voyage</h1>
+    				<form id="registerForm" class="form" action="#" method="post" onsubmit="checkAccess(event)">
+                        <input type="email" name="email" id="email" placeholder="Введіть електронну пошту" required>
+                        <input type="text" name="pass" id="pass" placeholder="Введіть пароль" required>
+                        <button type="submit">Увійти</button>
+                    </form>
+                    <div id="loginResult" style="margin-top: 10px;"></div>
+    				<div id="formError" style="color: red; margin-top: 10px;"><div>
+    			</div>
+    		</div>
+    	</section>
+    </main>
+
+    <footer>
+    <p>© 2025 Example. Всі права на зображення захищені.</p>
+    <p>Зображення та контент використано згідно з ліцензією на використання зображень з сайта <a href="http://www.freepik.com/" target="_blank">Freepik</a>.</p>
+</footer>
+</body>
+</html>
